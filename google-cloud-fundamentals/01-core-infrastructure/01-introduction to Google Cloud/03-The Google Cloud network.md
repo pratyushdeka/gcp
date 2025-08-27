@@ -1,0 +1,12 @@
+The Google Cloud Network (cloud.google.com/about/locations)
+- Seven major geographic locations
+- Having multiple service locations is important bcoz choosing where to locate apps affects qualities like
+	- Availability
+	- Durability
+	- Latency
+		- measures the time a packet of information takes to travel from its source to destination
+- Each location is divided into several different regions and zones
+- Regions represent independent geographic areas and are composed of zones
+- E.g. London or europe-west2 is a region that currently comprises three different zones
+- A zone is an area where Google Cloud resources are deployed. E.g europe-west2-a, europe-west2-b, europe-west2-c
+- Multi-region: Spanner multi-regions configurations allow you to replicate the database's data not just in multiple zones, but in multiple zones across multiple regions, as defined by the instance configuration

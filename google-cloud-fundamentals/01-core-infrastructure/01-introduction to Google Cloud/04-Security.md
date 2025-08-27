@@ -1,0 +1,20 @@
+Security (https://cloud.google.com/docs/security/infrastructure/design?hl=en)
+- Hardware infrastructure layer
+	- Hardware design and provenance
+	- Secure boot stack
+	- premises security
+- Service deployment layer
+	- encryption of inter-service communication
+	- Google’s infrastructure provides cryptographic privacy and integrity for remote procedure call (“RPC”) data on the network.
+- User identity layer
+	- User identity
+- Storage service layer
+	- Encryption at rest
+- Internet communication layer
+	- Google Front End ("GFE")
+	- Denial of service ("DoS") protection
+- Operational Security Layer
+	- Intrusion detection
+	- Reducing insider risk
+	- Employee universal second factor use
+	- Software deployment practices
