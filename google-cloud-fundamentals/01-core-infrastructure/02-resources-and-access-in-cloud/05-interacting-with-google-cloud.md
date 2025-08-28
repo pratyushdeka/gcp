@@ -1,0 +1,26 @@
+There are four ways to access and interact with Google Cloud
+- Google Cloud console
+	- Simple web-based graphical user interface that helps you deploy, scale, and diagnose production issues
+	- Easily find resources, check their health, have full management control over them, and set budgets
+	- Provides a search facility to quickly find resources and connect to instances via SSH in the browser
+- Google Cloud SDK and Cloud Shell
+	- Google Cloud SDK
+		- Set of tools to manage resources and applications hosted on Google Cloud
+		- Google Cloud CLI - Provides the main command-line interface for Google Cloud products and services
+		- bq - A command line tools for BigQuery
+	- Cloud Shell
+		- Provides command-line access to cloud resources directly from a browser
+		- Cloud shell is a Debian-based virtual machine with a persistent 5 GB home directory, which makes it easy to manage Google Cloud projects and resources
+		- With Cloud Shell, the Google Cloud SDK gcloud command and other utilities are always installed, available, up to date, and fully authenticated
+- APIs
+	- Google Cloud services offer APIs that allow code to be written to control them
+	- The Google APIs Explorer shows what APIs are available, and in what versions
+	- Google provides Cloud client and Google API Client libraries
+	- Languages currently represented: Java, Python, PHP, C#, Go, Node,js, Ruby and C++
+- Google Cloud App
+	- Start, stop, and use SSH to connect into Compute Engine instances, and see logs
+	- Stop and start Cloud SQL instances
+	- Administer applications deployed on App Engine by viewing errors, rolling back deployments, and changing traffic splitting
+	- Up-to-date billing information for projects and alerts for those going over budget
+	- Setup customisable graphs showing key metrics such as CPU usage, network usage, requests per second, and server errors
+	- Alerts and incident management
