@@ -8,7 +8,8 @@ Google cloud resource hierarchy contains four levels (from bottom up):
 - Organization
 	- Top level, which encompasses all the projects, folders, and resources in your organization
 
-![[cloud-hierarchy.svg|400]]
+
+![cloud-hierarchy](../images/cloud-hierarchy.svg)
 
 The resource hierarchy directly relates to how policies are managed and applied on Google Cloud
 - Policies can be defined at the project, folder, and organization node levels
