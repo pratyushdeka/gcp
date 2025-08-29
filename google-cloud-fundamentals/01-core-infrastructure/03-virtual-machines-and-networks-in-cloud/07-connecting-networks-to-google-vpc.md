@@ -1,0 +1,31 @@
+Many Google Cloud customers want to connect their Google Virtual Private Cloud networks to other networks in their system, such as on-premises networks or networks in other clouds.
+There are several effective ways to accomplish this
+- Cloud VPN
+	- Uses Cloud Router to make the connection dynamic
+	- Lets other networks and Google VPC, exchange route information over the VPN using the Border Gateway Protocol
+	- Using this method, if you add a new subnet to your Google VPC, your on-premises network will automatically get routes to it
+	- Not always the best option because of security concerns or bandwidth reliability
+- Direct Peering
+	- Puts a router in the same public data center as a Google point of presence
+	- Uses a router to exchange traffic between networks
+	- More than 100 Google points of presence around the world
+- Career Peering
+	- Customers who aren’t already in a point of presence can work with a partner in the Carrier Peering program to get connected
+	- Gives you direct access from on-premises network through a service provider's network to Google
+	- Not covered by a Google Service Level Agreement
+- Dedicated Interconnect
+	- getting the highest uptimes for interconnection
+	- Allows for one or more direct, private connections to Google
+	- Can be covered by up to a 99.99% SLA
+	- Connections can be backed up by a VPN
+- Partner Interconnect
+	- Provides connectivity between an on-premises network and a VPC network through a supported service provider
+	- Useful if a data center is in a physical location that can't reach a Dedicated Interconnect colocation facility
+	- Useful if the data needs don’t warrant an entire 10 GigaBytes per second connection
+	- Depending on availability needs, Partner Interconnect can be configured to support mission-critical services or applications that can tolerate some downtime
+	- Can be covered by up to a 99.99% SLA
+- Cross-Cloud Interconnect
+	- Establish high-bandwidth dedicated connectivity between Google Cloud and another cloud service provider
+	- Supports the adoption of an integrated multi-cloud strategy
+	- Offers reduced complexity, site-to-site data transfer, and encryption
+	- Two connections sizes: 10Gbps or 100Gbps
