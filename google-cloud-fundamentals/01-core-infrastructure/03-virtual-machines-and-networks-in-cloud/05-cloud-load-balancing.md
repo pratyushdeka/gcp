@@ -1,0 +1,51 @@
+How do your customers get to your application when it might be provided by four VMs one moment, and by 40 VMs at another? That's done through Cloud Load Balancing.
+
+Cloud Load Balancing
+- The job of a load balancer is to distribute user traffic across multiple instances of an application. By spreading the load, load balancing reduces the risk that applications experience performance issues
+- Cloud Load Balancing is a fully distributed, software-defined, managed service for all your traffic
+- You can put Cloud Load Balancing in front of all of your traffic: 
+	- HTTP or HTTPS
+	- TCP traffic
+	- SSL traffic
+	- UDP traffic
+- Provides cross-region load balancing, including automatic multi-region failover, which gently moves traffic in fractions if backends become unhealthy
+- Reacts quickly to changes in users, traffic, network, backend health, and other related conditions
+- No so-called “pre-warming” is required for anticipated spikes in traffic
+
+Google Cloud offers a range of load balancing solutions that can be classified based on the OSI model layer they operate at and their specific functionalities
+- Application Load Balancer (HTTP/HTTPS) - Layer 7
+	- Operate at the application layer and are designed to handle HTTP and HTTPS traffic
+	- Ideal for web applications and services that require advanced features like content-based routing and SSL/TLS termination
+	- Operate as reverse proxies, distributing incoming traffic across multiple backend instances based on rules you define
+	- Highly flexible and can be configured for both internet-facing (external) and internal applications
+	- Types:
+		- External
+			- Global external Application Load Balancer
+			- Regional external Application Load Balancer
+		- Internal
+			- Regional internal Application Load Balancer
+			- Cross-region internal Application Load Balancer
+- Network Load Balancer (TCP/UDP/other IP protocols) - Layer 4
+	- Operate at the transport layer and efficiently handle TCP, UDP, and other IP protocols
+	- Further classified into two Types
+		- Proxy Network Load Balancers
+			- Also function as reverse proxies, terminating client connections and establishing new ones to backend services
+			- Offer advanced traffic management capabilities and support backends located both on-premises and in various cloud environments
+			- Types
+				-  External
+					- Global external proxy Network Load Balancer
+					- Regional external proxy Network Load Balancer
+				- Internal
+					- Regional internal proxy Network Load Balancer
+					- Cross-region internal proxy Network Load Balancer
+		- Passthrough Network Load Balancers
+			- do not modify or terminate connections
+			- instead directly forward traffic to the backend while preserving the original source IP address
+			- well-suited for applications that require direct server return or need to handle a wider range of IP protocols
+			- Types
+				- External
+					- Regional
+						- Regional external passthrough Network Load Balancer
+				- Internal
+					- Regional
+						- Regional internal passthrough Network Load Balancer
