@@ -27,7 +27,8 @@ This capability can be used to build solutions that are resilient to disruptions
 
 The following example illustrates a custom mode VPC network with three subnets in two regions:
 
-![[vpc-overview-example.svg]]
+![image](../images/vpc-overview-example.svg)
+		
 
 - _Subnet1_ is defined as `10.240.0.0/24` in the us-west1 region.
     - Two VM instances in the us-west1-a zone are in this subnet. Their IP addresses both come from the available range of addresses in _subnet1_.
