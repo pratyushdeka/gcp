@@ -1,0 +1,53 @@
+Cloud Storage
+- A service that offers developers and IT organizations durable and highly available object storage
+- What is object storage?
+	- Object storage is a computer data storage architecture that manages data as "objects" and not as a file and folder hierarchy (file storage), or as chunks of a disk (block storage)
+	- These objects are stored in a packaged format which contains
+		- Binary form of the actual data itself
+		- Relevant associated meta-data (such as date created, author, resources type, and permissions)
+		- Globally unique identifier
+	- These unique keys are in the form of URLs, which means object storage interacts well with web technologies
+	- Data commonly stored as objects include
+		- Video
+		- Pictures
+		- Audio recording
+- Google's object storage product
+- Allows customers to store any amount of data, and to retrieve it as often as needed
+- Fully managed scalable service that has a wide variety of users
+- Examples: 
+	- Serving website content
+	- Storing data for archival and disaster recovery
+	- Distributing large data objects to end users via Direct Download
+- Primary Use:
+	- Binary large-object (BLOB) storage needed for 
+		- Online content
+		- Backup and archiving data
+		- Storage of intermediate results in processing workflows
+- Cloud storage files are organized into buckets
+	- A bucket needs a 
+		- globally unique name
+		- a specific geographic location for where it should be stored
+		- an ideal location for a bucket is where latency is minimized
+		- For example: if most of the application users are in Europe, probably pick a European location
+			- a specific Google cloud region
+			- EU multi-region
+- Cloud storage objects are immutable
+	- objects are not edited
+	- new version is created with every change made
+	- administrators have option to allow object versioning or not
+		- If object versioning is enabled, then Cloud Storage will keep a detailed history of modifications
+			- list the archived versions of an object
+			- restore an object to an older state
+			- permanently delete a version of an object
+		- If not enabled, then new versions will always overwrite older versions
+- Controlling access to stored data is essential to ensuring security and privacy are maintained. There are couple of options to control user access to objects and buckets
+	- Cloud IAM is sufficient for most purposes
+		- Roles are inherited from project to bucket to object
+	- Create access control lists (ACL) if finer control needed
+		- Scope - defines who can access and perform an action (can be a specific user or group of users )
+		- Permission - defines what actions can be performed, like read or write
+- Cloud Storage also offers lifecycle management policies
+	- Examples:
+		- Deletes objects older than 365 days
+		- Delete objects create before 1st January 2025
+		- Keep on the 3 most recent versions

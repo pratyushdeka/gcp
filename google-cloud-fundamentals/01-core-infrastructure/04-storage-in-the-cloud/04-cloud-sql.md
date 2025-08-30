@@ -1,0 +1,15 @@
+Cloud SQL
+- offers fully managed relational databases
+	- MySQL
+	- PostgreSQL
+	- SQL Server as a service
+- Designed to mundane tasks
+	- Applying patches
+	- Updates managing backups
+	- Configuring replications
+- doesn't require any software installation or maintenance
+- can scale up to 128 processor cores, 864 GB of RAM, and 64 TB of storage
+- supports automatic replication scenarios, such as from a Cloud SQL primary instance, an external primary instance, and external MySQL instances
+- supports managed backups, so backed-up data is securely stored and accessible if a restore is required - The cost of an instance covers seven backups
+- encrypts customer data when on Google’s internal networks and when stored in database tables, temporary files, and backups
+- includes a network firewall, which controls network access to each database instance
