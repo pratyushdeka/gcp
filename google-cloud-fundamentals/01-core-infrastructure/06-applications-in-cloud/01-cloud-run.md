@@ -29,3 +29,10 @@ Cloud Run Functions
 - Billed to the nearest 100 milliseconds, but only while your code is running
 - Supports writing source code in a number of programming languages
 - Events from Cloud Storage and Pub/Sub can trigger Cloud Run functions asynchronously, or you can use HTTP invocation for synchronous execution
+- integrated with Google Cloud Observability logging and monitoring services to make it fully observable
+- Why use Cloud Run Functions?
+	- Application contains event-driven code that they don't want to provision compute resources for
+- Example
+	- Sending an email notification whenever a new document is added to a specific folder in Cloud Storage
+	- Resizing images on demand when requested by a user through a web interface
+	- Generating thumbnails for images uploaded to a Cloud Storage bucket
