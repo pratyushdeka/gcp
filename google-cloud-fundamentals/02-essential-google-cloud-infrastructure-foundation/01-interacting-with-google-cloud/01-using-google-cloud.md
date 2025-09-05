@@ -1,0 +1,17 @@
+There are four ways to access and interact with Google Cloud
+- Google Cloud console
+	- provides a web-based, graphical user interface that you access through console.cloud.google.com
+- Google Cloud SDK and Cloud Shell
+	- Google Cloud CLI
+		- List your virtual machines and their details
+			- $gcloud compute instances list
+	- Cloud Shell
+		- a browser-based, interactive shell environment for Google Cloud that you can access from the Google Cloud console
+- REST-based APIs
+	- Google provides Cloud client and Google API Client libraries
+	- Languages currently represented: Java, Python, PHP, C#, Go, Node.js, Ruby and C++
+- Google Cloud Mobile App
+	- Manage virtual machines and database instances
+	- Manage apps in App engine
+	- Manage your billing
+	- Visualize projects with customisable dashboard
