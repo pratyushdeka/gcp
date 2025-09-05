@@ -1,3 +1,7 @@
+Get config list
+	```
+	gcloud config list
+	```
 Use Cloud Shell to create a Cloud Storage Bucket
 - Open Cloud Shell and ran
 	```
