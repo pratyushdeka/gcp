@@ -1,0 +1,14 @@
+In Google Cloud, each virtual machine can have two IP addresses assigned
+- Internal IP
+	- Allocated from subnet range to VMs by DHCP
+	- DHCP lease is renewed every 24hrs
+	- VM name + IP is registered with network-scoped DNS
+		- it can translate web URLs and VM names of hosts in the same network. but can't translate host names from VMs in a different network
+- External IP (optional)
+	- Assign external IP address if the machine is externally facing
+	- Assigned from
+		- Pool (ephemeral)
+		- Reserved external IP address (static)
+			- charged higher if not assigned to a resource or a forwarding rule
+	- Bring your own IP address (BYOIP)
+	- VM doesn't know external IP; it is mapped to the internal IP
