@@ -1,0 +1,60 @@
+Cloud Routes
+- A route is a mapping of an IP range to a destination
+	- Every network has:
+		- Routes that let instances in a network send traffic directly to each other, even across subnets
+		- A default route that directs packets to destinations that are outside the network
+	- __Firewall__ rules must also allow the packet
+- Routes map traffic to destination networks
+	- Apply to traffic egressing a VM
+	- Forward traffic to most specific route
+	- Are created when a subnet is created
+	- Enable VMs on same network to communicate
+	- Destination is in CIDR notation
+	- Traffic is delivered only if ti also matches a firewall rule
+
+Cloud Firewall Rules
+- Firewall rules protect your VM instances form unapproved connections, both inbound and outbound, known as ingress and egress, respectively
+	- Every VPC network functions as a distributed firewall
+	- Firewall rules are applied to the network as a whole
+	- Connections are allowed or denied at the instance level
+	- GCP firewall rules are stateful
+		- Firewall rules allow bidirectional communication once a session is established
+	- Implied deny all ingress and allow all egress
+	- A firewall rule is composed of the following parameters 
+		- direction
+			- Inbound connections are matched against **ingress** rules only
+			- Outbound connections are matched against **egress** rules only
+		- source or destination
+			- For the **ingress** direction, **sources** can be specified as part of the rule with IP addresses, source tags or a source service account
+			- For the **egress** direction, **destinations** can be specified as part of the rule with one or more range of IP addresses
+		- protocol and port
+			- Any rule can be restricted to apply to specific protocols only or specific combinations of protocols and ports only
+		- action
+			- To allow or deny packets that match the direction, protocol, port, and source or destination of the rule
+		- priority
+			- Governs the order in which rules are evaluated; the first matching rule is applied
+		- Rule assignment
+			- All rules are assigned to all instances, but you can assign certain rules to certain instances only
+- Google Cloud firewall use case: Egress
+	- Egress firewall rules control outgoing connections originated inside GCP network
+	- Conditions:
+		- Destination CIDR ranges
+		- Protocols
+		- Ports
+	- Action
+		- Allow: permit the matching egress connection
+			- Egress allow rules allow outbound connections that match specific protocol, ports, and IP addresses
+		- Deny: block the matching egress connection
+			- Egress deny rules prevent instances from initiating connections that match non-permitted port, protocol, and IP range combinations
+	- For egress firewall rules, destinations to which a rule applies may be specified using IP CIDR ranges
+- Google Cloud firewall use case: Ingress
+	- Ingress firewall rules protect against incoming connections to the instance from any source
+	- Ingress allow rules allow specific protocol, ports, and IP ranges to connect in
+	- Conditions:
+		- Destination CIDR ranges
+		- Protocols
+		- Ports
+	- Action
+		- Allow: permit the matching ingress connection
+		- Deny: block the matching ingress connection
+	- control ingress connections from a VM instance by constructing inbound connection conditions using source CIDR ranges, protocols, or ports
